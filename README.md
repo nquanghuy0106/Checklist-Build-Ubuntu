@@ -25,6 +25,6 @@ sudo chmod +x renew-lic.sh
 > sudo crontab -e \
 0 0 1 */2 * /etc/nvidia/renew-lic.sh 
 # remove old machine-id for every vm after create generate new machine-id 
-> sudo rm /etc/machine-id && stouch /etc/machine-id
+> sudo rm /etc/machine-id && sudo touch /etc/machine-id
 # remove every bash history for package template
 > sudo cat /dev/null > ~/.bash_history && history -c
