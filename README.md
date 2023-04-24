@@ -9,7 +9,7 @@ check list build ubuntu template
 # Install Nvidia Driver
 > sudo dpkg -i /tmp/Nvidia.x.x..xxx
 # Config cloud-init boot auto generate token license from server & restart nvidia services
-> sudo vi /etc/cloud/cloud.cfg
+> sudo vi /etc/cloud/cloud.cfg <
 bootcmd:
  – curl --insecure -L -X GET https://103.140.249.10/-/client-token -o /etc/nvidia/ClientConfigToken/client_configuration_token_$(date '+%d-%m-%Y-%H-%M-%S').tok
  – service nvidia-gridd restart
