@@ -26,4 +26,4 @@ wget --no-check-certificate -O /etc/nvidia/ClientConfigToken/client_configuratio
 # remove old machine-id for every vm after create generate new machine-id 
 – sudo rm /etc/machine-id && touch /etc/machine-id
 # remove every bash history for package template
-– sudo cat /dev/null > /.bash_history && history -c
+– sudo cat /dev/null > ~/.bash_history && history -c
