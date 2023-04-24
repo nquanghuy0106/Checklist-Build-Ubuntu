@@ -46,3 +46,7 @@ sudo chmod +x renew-lic.sh
 #Next, we’ll need to set the file permissions to 644, and enable our service by using systemctl:
 > sudo chmod 644 /etc/systemd/system/renew-lic.service \
 > sudo systemctl enable renew-lic.service
+
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+-WindowStyle hidden -ExecutionPolicy Bypass -File "C:\Program Files\Cloudbase Solutions\Cloudbase-Init\LocalScripts\renew-lic.ps1"
+C:\Program Files\Cloudbase Solutions\Cloudbase-Init\LocalScripts\
