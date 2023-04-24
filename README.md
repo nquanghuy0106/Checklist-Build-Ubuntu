@@ -28,3 +28,21 @@ sudo chmod +x renew-lic.sh
 > sudo rm /etc/machine-id && sudo touch /etc/machine-id
 # remove every bash history for package template
 > sudo cat /dev/null > ~/.bash_history && history -c
+
+# Bug Ubuntu 22.04 can't boot OS when restart nvidia-gridd service from cloud-init.
+# Use Systemd for get license from server && restart nvidia gridd service
+> sudo vi /etc/systemd/system/renew-lic.sh 
+
+> [Unit] \
+> Description=Renew Lic.
+
+> [Service] \
+> Type=simple \
+> ExecStart=/bin/bash /etc/nvidia/renew-lic.sh 
+
+> [Install] \
+> WantedBy=multi-user.target
+
+#Next, we’ll need to set the file permissions to 644, and enable our service by using systemctl:
+> sudo chmod 644 /etc/systemd/system/renew-lic.service \
+> sudo systemctl enable renew-lic.service
