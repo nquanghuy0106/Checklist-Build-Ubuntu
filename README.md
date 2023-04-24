@@ -12,7 +12,7 @@ check list build ubuntu template
 > sudo vi /etc/cloud/cloud.cfg \
 bootcmd: \
  – curl --insecure -L -X GET https://103.140.249.10/-/client-token -o /etc/nvidia/ClientConfigToken/client_configuration_token_$(date '+%d-%m-%Y-%H-%M-%S').tok \
- – service nvidia-gridd restart \
+ – service nvidia-gridd restart 
 # Check license assign
 > nvidia-smi -q | grep "Licensed"
 # Create new bash script for auto renew token license & restart services apply new lic
