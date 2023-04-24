@@ -1,7 +1,7 @@
 # Checklist-Build-Ubuntu
 check list build ubuntu template
 # Update & Upgrade OS
-- sudo apt-get update && sudo apt-get upgrade
+> - sudo apt-get update && sudo apt-get upgrade
 # Set TimeZone Asia/Ho_Chi_Minh
 - sudo timedatectl set-timezone Asia/Ho_Chi_Minh
 # Install DKMS package for Nvidia Services
