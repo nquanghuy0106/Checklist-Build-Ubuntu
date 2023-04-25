@@ -47,6 +47,11 @@ sudo chmod +x renew-lic.sh
 > sudo chmod 644 /etc/systemd/system/renew-lic.service \
 > sudo systemctl enable renew-lic.service
 
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
--WindowStyle hidden -ExecutionPolicy Bypass -File "C:\Program Files\Cloudbase Solutions\Cloudbase-Init\LocalScripts\renew-lic.ps1"
-C:\Program Files\Cloudbase Solutions\Cloudbase-Init\LocalScripts\
+# Windows Task Schedule
+![image](https://user-images.githubusercontent.com/106576870/234170668-7ca835f3-f2d1-457a-9a79-220bebb12646.png)
+![image](https://user-images.githubusercontent.com/106576870/234170721-4da54922-5a45-49b2-896b-345d7d640486.png)
+
+arguments \
+-executionpolicy bypass -noninteractive -file "C:\Program Files\Cloudbase Solutions\Cloudbase-Init\LocalScripts\renew-lic.ps1"
+
+
