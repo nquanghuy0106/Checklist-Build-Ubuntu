@@ -1,0 +1,2 @@
+curl.exe --insecure -L -X GET https://103.140.249.10/-/client-token -o "C:\Program Files\NVIDIA Corporation\vGPU Licensing\ClientConfigToken\client_configuration_token_$($(Get-Date).tostring('dd-MM-yy-hh-mm-ss')).tok"
+Restart-Service NVDisplay.ContainerLocalSystem
